@@ -16,6 +16,13 @@ puts "Creating freebies..."
 # * TODO: create freebies! Remember, a freebie belongs to a dev *
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
-# Create freebies Here
+5.times do 
+  Freebie.create(
+    item_name: Faker::Name.name, 
+    value: Faker::Number.between(from: 1, to: 10000000), 
+    company_id: Faker::Number.between(from: 1, to: 4), 
+    dev_id: Faker::Number.between(from: 1, to: 4)
+  )
+end
 
 puts "Seeding done!"
