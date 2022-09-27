@@ -3,6 +3,6 @@ class Freebie < ActiveRecord::Base
   belongs_to :company 
 
   def dev 
-    self.dev 
+    Dev.find(self.dev_id)  
   end
 end
